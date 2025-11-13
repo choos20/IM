@@ -1,0 +1,368 @@
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+body {
+  font-family: 'Poppins', system-ui, Arial, sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+  /* SK colors gradient: red/orange (#e63b2e) to blue (#0056a6) */
+  background: linear-gradient(135deg, #e63b2e 0%, #ffd166 50%, #0056a6 100%);
+  color: #fff; /* default text color for contrast */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-left img {
+  height: 60px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo-text .sk {
+  color: #ffd166;
+}
+
+.logo-text .connect {
+  color: #fff;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+/* General */
+body.contact-body {
+  font-family: 'Poppins', system-ui, Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(45deg, #e63b2e, #0056a6);
+  scroll-behavior: smooth;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: linear-gradient(45deg, #e63b2e, #0056a6);
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .header-left img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-text .sk { color: #fff; }
+.logo-text .connect { color: #ffd166; }
+
+header h1 {
+  margin: 5px 0 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* Navigation */
+nav {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+nav li { margin: 0; }
+
+nav a {
+  display: block;
+  padding: 16px 22px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  background: #e63b2e;
+  color: #fff;
+}
+
+
+/* ===========================
+   NEWS MAIN CONTENT
+=========================== */
+.news-main {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+.news-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.news-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.news-hero p {
+  font-size: 1.1rem;
+}
+
+/* ===========================
+   NEWS CARDS
+=========================== */
+.news-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.news-card {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.news-card h2 {
+  color: #e63b2e;
+  margin-top: 0;
+}
+
+.news-card .date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* ===========================
+   CRUD FORMS (Add & Edit)
+=========================== */
+.add-news, .edit-news {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.add-news h2, .edit-news h2 {
+  color: #e63b2e;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}
+
+.add-news form, .edit-news form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-news input,
+.add-news textarea,
+.edit-news input,
+.edit-news textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.add-news input:focus,
+.add-news textarea:focus,
+.edit-news input:focus,
+.edit-news textarea:focus {
+  border-color: #e63b2e;
+  box-shadow: 0 0 5px rgba(230, 59, 46, 0.3);
+  outline: none;
+}
+
+.add-news button,
+.edit-news button {
+  background-color: #e63b2e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.add-news button:hover,
+.edit-news button:hover {
+  background-color: #c12c21;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+.actions {
+  margin-top: 10px;
+}
+
+.actions a {
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-right: 8px;
+  transition: 0.3s ease;
+}
+
+.edit-btn {
+  background: #0056a6;
+}
+
+.edit-btn:hover {
+  background: #004080;
+}
+
+.delete-btn {
+  background: #e63b2e;
+}
+
+.delete-btn:hover {
+  background: #c12c21;
+}
+
+/* ===========================
+   BACK BUTTON
+=========================== */
+.back-container {
+  text-align: left;
+  margin-left: 0;
+  padding: 20px;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #fff;
+  background: #333;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #111;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 15px 0;
+  color: #fff;
+  margin-top: auto;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 768px) {
+  .news-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .news-section, .add-news {
+    width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+
+
+/* Notification Banner */
+.notification {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.notification.success {
+  background-color: rgba(46, 204, 113, 0.9); /* green */
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.notification.error {
+  background-color: rgba(231, 76, 60, 0.9); /* red */
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
